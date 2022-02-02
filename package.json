@@ -1,0 +1,17 @@
+{
+  "name": "findtheuniquestring",
+  "version": "1.0.0",
+  "description": "find unqique string 5 kata",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "shawn faber",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^27.4.7"
+  }
+}
