@@ -1,9 +1,10 @@
 There is an array of strings. All strings contains similar letters except one. Try to find it!
 
+```
 findUniq([ 'Aa', 'aaa', 'aaaaa', 'BbBb', 'Aaaa', 'AaAaAa', 'a' ]) === 'BbBb'
 findUniq([ 'abc', 'acb', 'bac', 'foo', 'bca', 'cab', 'cba' ]) === 'foo'
+```
 Strings may contain spaces. Spaces is not significant, only non-spaces symbols matters. E.g. string that contains only spaces is like empty string.
-
 It’s guaranteed that array contains more than 3 strings.
 
 This is the second kata in series:
@@ -23,3 +24,17 @@ describe('findUniq', () => {
   });
 });
 ```
+
+
+### Possible solution
+
+1. determine all unique char in first string
+    - use array?
+2. compare each other string to that string and find that one that doesn't match
+
+
+### 2/2/22 Failing the following tests
+
+[ 'foobar', 'barfo', 'fobara', '   ', 'fobra', 'oooofrab' ]
+Space string in letters - Expected: '   ', instead got: 'foobar'
+
