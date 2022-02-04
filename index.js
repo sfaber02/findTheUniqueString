@@ -6,7 +6,17 @@ const findUniq = (array) => {
             curr = array[i].toLowerCase().split('').sort().join('');
             for(char of curr){
                 if(!(charSet.includes(char.toLowerCase()))){
-                    return array[i];
+                    if(i > 1){
+                        return array[i];
+                    }else{
+                        for(let char2 of array[2]){
+                            if(!(charSet.includes(char2.toLowerCase()))){
+                                return array[0];
+                            }else{
+                                return array[1];
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -27,7 +37,8 @@ const findUniq = (array) => {
 // findUniq([ 'Tom Marvolo Riddle', 'I am Lord Voldemort', 'Harry Potter' ]);
 // findUniq([ 'foobar', 'barfo', 'fobara', '   ', 'fobra', 'oooofrab' ]);
 // findUniq([ '   ', 'foobar', 'barfo', 'fobara', 'fobra', 'oooofrab' ]);
-findUniq([ 'o', 'b', 'b', 'b' ]);
+// findUniq([ 'o', 'b', 'b', 'b' ]);
+findUniq( ["    ","a"," "]);
 
 module.exports = {
     findUniq
